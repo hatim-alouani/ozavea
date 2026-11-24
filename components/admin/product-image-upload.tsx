@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { supabase } from "@/lib/supabase/client";
+import { createClient } from "@/lib/supabase/client";
 
 type ProductImageUploadProps = {
   value: string;
@@ -17,6 +17,7 @@ export default function ProductImageUpload({
   const [uploading, setUploading] = useState(false);
   const [dragging, setDragging] = useState(false);
   const [error, setError] = useState("");
+  const supabase = createClient();
 
   const MAX_SIZE = 8 * 1024 * 1024;
 

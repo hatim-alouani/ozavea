@@ -1,6 +1,7 @@
 
 "use client";
 
+import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import type { ReactNode } from "react";
 import { supabasePublic } from "@/lib/supabase";
@@ -348,7 +349,7 @@ export default function AdminDashboard() {
       {/* SIDEBAR */}
       <aside className={`oz-admin-sidebar ${mobileMenu ? "is-open" : ""}`}>
         <div className="oz-admin-logo">
-          <a href="/ar" className="oz-admin-brand">OZAVEA</a>
+          <Link href="/ar" className="oz-admin-brand">OZAVEA</Link>
           <span>ADMINISTRATION</span>
         </div>
 
@@ -393,7 +394,7 @@ export default function AdminDashboard() {
             </div>
           </div>
 
-          <a href="/" className="oz-admin-back">↗ View storefront</a>
+          <Link href="/" className="oz-admin-back">↗ View storefront</Link>
         </div>
       </aside>
 
